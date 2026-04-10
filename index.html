@@ -252,27 +252,23 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);min-
     <div class="config-row">
       <div><div class="config-label">Número de preguntas</div><div class="config-sub">Selecciona cuántas quieres responder</div></div>
       <select class="config-select" id="cfg-count">
-        <option value="10">10 preguntas</option>
-        <option value="15" selected>15 preguntas</option>
-        <option value="20">Todas (20)</option>
-      </select>
+        <option value="10" selected>10 preguntas</option>
+              </select>
     </div>
     <div class="config-row">
       <div><div class="config-label">Tiempo por pregunta</div><div class="config-sub">Segundos disponibles para responder</div></div>
       <select class="config-select" id="cfg-time">
-        <option value="15">15 segundos</option>
-        <option value="20" selected>20 segundos</option>
-        <option value="30">30 segundos</option>
-        <option value="45">45 segundos</option>
+                <option value="20" selected>20 segundos</option>
+      
       </select>
     </div>
     <div class="config-row">
       <div><div class="config-label">Dificultad</div><div class="config-sub">Filtra por nivel de dificultad</div></div>
       <select class="config-select" id="cfg-diff">
-        <option value="all" selected>Todas</option>
-        <option value="easy">Básico</option>
-        <option value="medium">Intermedio</option>
-        <option value="hard">Avanzado</option>
+        
+       
+        <option value="medium" selected>Intermedio</option>
+        
       </select>
     </div>
     <button class="btn-start" id="btn-start">Comenzar Quiz →</button>
@@ -733,7 +729,7 @@ async function saveResults() {
     texto_correcto:   r.opts[r.correct],
     estado:           r.status,
     tiempo_restante:  r.timeLeft
-  })));
+  }));
   await sbInsert('quiz_respuestas', respuestas);
 
   return true;
