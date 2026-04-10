@@ -245,7 +245,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);min-
       </div>
     </div>
     <div class="start-stats">
-      <div class="stat-box"><div class="num">20</div><div class="lbl">preguntas</div></div>
+      <div class="stat-box"><div class="num">10</div><div class="lbl">preguntas</div></div>
       <div class="stat-box"><div class="num">4</div><div class="lbl">categorías</div></div>
       <div class="stat-box"><div class="num">⏱</div><div class="lbl">con tiempo</div></div>
     </div>
@@ -258,7 +258,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);min-
     <div class="config-row">
       <div><div class="config-label">Tiempo por pregunta</div><div class="config-sub">Segundos disponibles para responder</div></div>
       <select class="config-select" id="cfg-time">
-                <option value="20" selected>20 segundos</option>
+                <option value="30" selected>30 segundos</option>
       
       </select>
     </div>
@@ -293,7 +293,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);min-
         <circle class="timer-track" cx="28" cy="28" r="23"/>
         <circle class="timer-ring" id="timer-ring" cx="28" cy="28" r="23" stroke="#5b9cf6" stroke-dasharray="144.5" stroke-dashoffset="0"/>
       </svg>
-      <div class="timer-num" id="timer-num">20</div>
+      <div class="timer-num" id="timer-num">30</div>
     </div>
     <div class="timer-info">
       <div class="timer-label">Tiempo restante</div>
@@ -657,7 +657,7 @@ let state   = {};
 function resetState() {
   state = {
     questions:[],current:0,score:0,correct:0,wrong:0,timeout:0,
-    totalTime:0,startTime:0,timePerQ:20,results:[],
+    totalTime:0,startTime:0,timePerQ:30,results:[],
     timer:null,timeLeft:0,answered:false
   };
 }
